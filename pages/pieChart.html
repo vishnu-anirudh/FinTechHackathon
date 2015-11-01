@@ -102,9 +102,11 @@
       height="{{ height }}"
       showLabels="true"
       pieLabelsOutside="false"
-      showValues="true"
-      labelType="percent">
-      <svg></svg>
+      
+      showLabels="true"
+      labelType="key"
+      pieLabelsOutside="true">
+      <svg height="250"></svg>
     </nvd3-pie-chart>
 
     <div>
@@ -134,8 +136,8 @@ app.controller('ExampleCtrl', function($scope, $http) {
     	
                 console.log("hello");
     	
-    	$scope.width = 500;
-    $scope.height = 500;
+    	$scope.width = 400;
+    $scope.height = 400;
 
     $scope.xFunction = function() {
       return function(d) {
