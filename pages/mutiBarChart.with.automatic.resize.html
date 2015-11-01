@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <html>
 <head>
-    <title>Angular.js nvd3.js Line Chart Directive</title>
+    <title>Bar Chart - FinTech</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF8">
     <script src="js/angular.js"></script>
     <script src="js/d3.js"></script>
@@ -10,6 +10,13 @@
     <script src="../dist/angularjs-nvd3-directives.js"></script>
     <link rel="stylesheet" href="stylesheets/nv.d3.css"/>
     
+    
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+<link rel="stylesheet" type="text/css" href="fintech.css">
+
+        <link rel="stylesheet" href="css/layouts/gallery-grid.css">
+
    <!-- 
     <script>
         var app = angular.module("nvd3TestApp", ['nvd3ChartDirectives']);
@@ -43,6 +50,22 @@
 </head>
 <body ng-app='nvd3TestApp'>
 
+
+<div>
+    <div class="header">
+        <div class="pure-menu pure-menu-horizontal" >
+            <a class="pure-menu-heading" href="">A...B...C...</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item pure-menu-selected"><a href="../index1.html" class="pure-menu-link">Tables</a></li>
+                <li class="pure-menu-item"><a href="PieChart.html" class="pure-menu-link">Pie Chart</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Bar Graph</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
 <div ng-controller="ExampleCtrl">
  	<nvd3-multi-bar-chart
     	data="exampleData"
@@ -67,7 +90,7 @@ var app = angular.module('nvd3TestApp', ['nvd3ChartDirectives']);
 
 
 app.controller('ExampleCtrl', function($scope, $http) {
-    $http.get("http://polar-citadel-9875.herokuapp.com/analysis/bucked/scenario/3")
+    $http.get("https://raw.githubusercontent.com/vva4innovation/FinTechHackathon/master/adata.json")
     .success(function (response) {
     	var values=response.names.length
     	console.log(values)
